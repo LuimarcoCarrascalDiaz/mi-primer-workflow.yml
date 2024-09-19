@@ -2,7 +2,7 @@
 name: Hola mundo
 on:
   push:
-    branches: [ master ]
+    branches: main
 jobs:
   Mi-primer-job:
     name: Mi primer job
