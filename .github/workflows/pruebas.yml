@@ -1,3 +1,4 @@
+
 name: Pruebas unitarias
 on:
   push:
@@ -7,12 +8,16 @@ jobs:
     name: Pruebas
     runs-on: ubuntu-latest
     steps:
+    - name: instalando ambientes de desarrollo
+      run: python -m venv virtual
+    - name: cargando archivo de requerimientos
+      run: pip install -r requirements.txt
     - name: Checkout de repositorio
       uses: actions/checkout@v2
-    - name: Configuración de entorno de python
-      uses: actions/setup-python@v2
+    
       with:
           python-version: '3.7'
     - name: Correr pruebas
       id: correr-pruebas
+      
       run: python -m unittest -v test/test_persona.py
