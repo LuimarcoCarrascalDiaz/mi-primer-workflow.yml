@@ -20,4 +20,4 @@ jobs:
     - name: Correr pruebas
       id: correr-pruebas
       
-      run: python -m unittest -v test/test_persona.py
+      run: python -m unittest -v test/persona_test.py
